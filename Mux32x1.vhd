@@ -1,26 +1,31 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
+package bus_multiplexer_pkg32 is
+        type mux32x1_32bit is array (31 downto 0) of std_logic_vector(31 downto 0);
+end package;
+
 entity Mux32x1 is
-    Port ( i : in  STD_LOGIC_VECTOR (31 downto 0);
+    Port ( i : in  mux32x1_32bit;
            sel : in  STD_LOGIC_VECTOR (4 downto 0);
-           o : out  STD_LOGIC);
+           o : out  std_logic_vector (31 downto 0));
 end Mux32x1;
 
 architecture Behavioral of Mux32x1 is
 	
 	component Mux8x1 is
-    Port ( i : in  STD_LOGIC_VECTOR (7 downto 0);
+    Port ( i : in  STD_LOGIC_VECTOR (7 downto 0)(31 downto 0);
            sel : in  STD_LOGIC_VECTOR (2 downto 0);
-           o : out  STD_LOGIC);
+           o_out : out  std_logic_vector (31 downto 0));
 	end component;
 	
 	component mux2x1 is
-		port(i0, i1, sel : in std_logic;
-			  o : out std_logic);
+		port(i0, i1: in std_logic_vector (31 downto 0);
+			  sel : in std_logic;
+			  o_out : out std_logic_vector (31 downto 0));
 	end component;	
 	
-	signal out_mux8x1_mux4x1: STD_LOGIC_VECTOR (3 downto 0);
+	signal out_mux8x1_mux4x1: STD_LOGIC_VECTOR (3 downto 0)(31 downto 0);
 	-- test the generate sig function, if it works, delete the commented code
 	
 --	signal out_mux1_mux5: STD_LOGIC;
@@ -32,7 +37,7 @@ begin
 	
 	gen: for j in 0 to 3 generate
 		mux: mux8x1 port map (i <= i((7 + 8 * j) downto (0 + 8 * j)) , 
-									  sel => sel(2 downto 0), 
+									  sel <= sel(2 downto 0), 
 									  o => out_mux8x1_mux4x1(j));
 	end generate;
 	
