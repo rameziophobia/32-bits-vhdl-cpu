@@ -1,14 +1,10 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
-package bus_multiplexer_pkg32 is
-        type mux32x1_32bit is array (31 downto 0) of std_logic_vector(31 downto 0);
-end package;
-
 entity Mux32x1 is
-    Port ( i : in  mux32x1_32bit;
+    Port ( i : in  reg_type_32bit;
            sel : in  STD_LOGIC_VECTOR (4 downto 0);
-           o : out  std_logic_vector (31 downto 0));
+           o_out : out  std_logic_vector (31 downto 0));
 end Mux32x1;
 
 architecture Behavioral of Mux32x1 is
@@ -38,7 +34,7 @@ begin
 	gen: for j in 0 to 3 generate
 		mux: mux8x1 port map (i <= i((7 + 8 * j) downto (0 + 8 * j)) , 
 									  sel <= sel(2 downto 0), 
-									  o => out_mux8x1_mux4x1(j));
+									  o_out => out_mux8x1_mux4x1(j));
 	end generate;
 	
 	mux5: mux4x1 port map (i0 => out_mux8x1_mux4x1(0), 
@@ -46,7 +42,7 @@ begin
 	                       i2 => out_mux8x1_mux4x1(2),
 								  i3 => out_mux8x1_mux4x1(3),
 								  sel => sel(4 downto 3), 
-								  o => o);
+								  o_out => o_out);
 								  
 --	mux1: mux8x1 port map (i <= i(7 downto 0) , 
 --								  sel => sel(2 downto 0), 

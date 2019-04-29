@@ -22,10 +22,18 @@
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="RegisterFile.xise"/>
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="RegisterFileTest_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="RegisterFileTest_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="RegisterFileTest_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="RegisterFileTest_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="mux4x1.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="mux4x1.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="mux4x1.xst"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
   </files>
 
@@ -34,28 +42,64 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1556577540" xil_pn:in_ck="-1247084037307243707" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1556577540">
+    <transform xil_pn:end_ts="1556579716" xil_pn:in_ck="-1247084037307243707" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1556579716">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputAdded"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="InputRemoved"/>
-      <status xil_pn:value="OutputChanged"/>
-      <status xil_pn:value="OutputRemoved"/>
+      <outfile xil_pn:name="Decoder2x4.vhd"/>
+      <outfile xil_pn:name="Decoder2x4_en.vhd"/>
+      <outfile xil_pn:name="Decoder3x8_en.vhd"/>
+      <outfile xil_pn:name="Full_Adder.vhd"/>
+      <outfile xil_pn:name="Mux32x1.vhd"/>
+      <outfile xil_pn:name="Mux32x1_32bit.vhd"/>
+      <outfile xil_pn:name="Mux8x1.vhd"/>
+      <outfile xil_pn:name="RegisterFileTest.vhd"/>
+      <outfile xil_pn:name="mux2x1.vhd"/>
+      <outfile xil_pn:name="mux4x1.vhd"/>
+      <outfile xil_pn:name="reg.vhd"/>
+      <outfile xil_pn:name="regiserFile.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1556563192" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-9044832904953873877" xil_pn:start_ts="1556563192">
+    <transform xil_pn:end_ts="1556579722" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="682837817097097979" xil_pn:start_ts="1556579722">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1556563192" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="2623569966022418569" xil_pn:start_ts="1556563192">
+    <transform xil_pn:end_ts="1556579722" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="8110330790609613145" xil_pn:start_ts="1556579722">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
     <transform xil_pn:end_ts="1556563192" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-8550110325408787951" xil_pn:start_ts="1556563192">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1556579722" xil_pn:in_ck="-1247084037307243707" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1556579722">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="Decoder2x4.vhd"/>
+      <outfile xil_pn:name="Decoder2x4_en.vhd"/>
+      <outfile xil_pn:name="Decoder3x8_en.vhd"/>
+      <outfile xil_pn:name="Full_Adder.vhd"/>
+      <outfile xil_pn:name="Mux32x1.vhd"/>
+      <outfile xil_pn:name="Mux32x1_32bit.vhd"/>
+      <outfile xil_pn:name="Mux8x1.vhd"/>
+      <outfile xil_pn:name="RegisterFileTest.vhd"/>
+      <outfile xil_pn:name="mux2x1.vhd"/>
+      <outfile xil_pn:name="mux4x1.vhd"/>
+      <outfile xil_pn:name="reg.vhd"/>
+      <outfile xil_pn:name="regiserFile.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1556579731" xil_pn:in_ck="-1247084037307243707" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-4100612733271829210" xil_pn:start_ts="1556579722">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="RegisterFileTest_beh.prj"/>
+      <outfile xil_pn:name="RegisterFileTest_isim_beh.exe"/>
+      <outfile xil_pn:name="fuse.log"/>
+      <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="xilinxsim.ini"/>
+    </transform>
+    <transform xil_pn:end_ts="1556579731" xil_pn:in_ck="-224736801636432428" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="4330230516463220371" xil_pn:start_ts="1556579731">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="RegisterFileTest_isim_beh.wdb"/>
+      <outfile xil_pn:name="isim.cmd"/>
     </transform>
   </transforms>
 
