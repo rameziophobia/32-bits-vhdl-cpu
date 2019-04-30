@@ -12,7 +12,13 @@ architecture Behavioral of mux2x1 is
 
 begin
 
-	o_out <= (i0 and not(sel)) or (i1 and sel);
+	p_mux : process(i0,i1,sel)
+	begin
+	  case sel is
+		 when '0' => o_out <= i0 ;
+		 when others => o_out <= i1 ;
+	  end case;
+	end process p_mux;
 
 end Behavioral;
 

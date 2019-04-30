@@ -16,8 +16,8 @@ architecture Behavioral of mux4x1 is
 			  o_out : out std_logic_vector (31 downto 0));
 	end component;
 	
-	signal out_mux1_mux3: STD_LOGIC;
-	signal out_mux2_mux3: STD_LOGIC;
+	signal out_mux1_mux3: std_logic_vector (31 downto 0);
+	signal out_mux2_mux3: std_logic_vector (31 downto 0);
 begin
 	
 	mux1: mux2x1 port map (
