@@ -2,7 +2,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 USE ieee.numeric_std.ALL; 
 library work;
-use work.registers.all;
+use work.registers_package.all;
  
 ENTITY mux32_tb IS
 END mux32_tb;

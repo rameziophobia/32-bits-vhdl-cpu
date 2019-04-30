@@ -1,7 +1,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.all;
 
-package registers is
+package registers_package is
 	type reg_type_32bit is array (0 to 31) of std_logic_vector(31 downto 0);
 
 	component Decoder5x32 is
@@ -29,10 +29,10 @@ package registers is
 					 out_data : out  reg_type_32bit);
 	end component;
 
-end registers;
+end registers_package;
 
-package body registers is
+package body registers_package is
 
 
  
-end registers;
+end registers_package;

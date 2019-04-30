@@ -1,5 +1,5 @@
 library work;
-use work.registers.all;
+use work.registers_package.all;
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use ieee.numeric_std.all;
