@@ -3,7 +3,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity Decoder2x4_en is
     Port ( i : in  STD_LOGIC_VECTOR (1 downto 0);
-	        en: in  STD_LOGIC_VECTOR;
+	        en: in  STD_LOGIC;
            o : out STD_LOGIC_VECTOR (3 downto 0));
 end Decoder2x4_en;
 
