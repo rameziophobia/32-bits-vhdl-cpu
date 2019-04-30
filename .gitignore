@@ -88,3 +88,7 @@ isim/RegisterFileTest_isim_beh.exe.sim/tmp_save/_1
 *.wdb
 *.cmd
 *.xmsgs
+xst/work/work.vdbl
+*.vdbx
+*.vdbl
+*.gise

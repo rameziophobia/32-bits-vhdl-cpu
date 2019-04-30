@@ -16,9 +16,7 @@ begin
 		if (clk'EVENT and clk = '1') THEN 
 			if (write_ena = '1') THEN 
 				out_data <= in_data ;
-			else
-				in_data <= in_data ;
-			end if; 
+			end if;
 		end if; 
 	end process;	
 end Behavioral;
