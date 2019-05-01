@@ -1,6 +1,3 @@
-# Don't track content of these folders
-_xmsgs/
-
 # intermediate build files
 *.bgn
 *.bit
@@ -45,8 +42,6 @@ _xmsgs/
 *_usage.xml
 *_xst.xrpt
 
-
-
 # iMPACT generated files
 _impactbatch.log
 impact.xsl
@@ -83,12 +78,9 @@ isim/pn_info
 *.exe
 isim/RegisterFileTest_isim_beh.exe.sim/tmp_save/_1
 *.vdb
-*.xmsgs
 *.ini
 *.wdb
 *.cmd
-*.xmsgs
 xst/work/work.vdbl
 *.vdbx
 *.vdbl
-*.gise
