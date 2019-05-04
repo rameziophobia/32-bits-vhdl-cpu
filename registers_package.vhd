@@ -12,6 +12,7 @@ package registers_package is
 	component Mux32x1 is
 		Port ( i : in  reg_type_32bit;
 				 sel : in  STD_LOGIC_VECTOR (4 downto 0);
+				 clk : in  STD_LOGIC;
 				 o_out : out  std_logic_vector (31 downto 0));
 	end component;
 	

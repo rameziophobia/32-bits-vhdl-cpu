@@ -23,8 +23,8 @@ architecture Behavioral of RegisterFile is
 	signal regs: reg_type_32bit;
 begin
 
-	read_mux1 : Mux32x1 port map (i => regs, sel => read_sel1 , o_out => data1);
-	read_mux2 : Mux32x1 port map (i => regs, sel => read_sel2 , o_out => data2);
+	read_mux1 : Mux32x1 port map (i => regs, sel => read_sel1, clk => clk,  o_out => data1);
+	read_mux2 : Mux32x1 port map (i => regs, sel => read_sel2, clk => clk, o_out => data2);
 
 	write_en_dec : Decoder5x32 port map (
 		i => write_sel, o => write_decoder_register);
