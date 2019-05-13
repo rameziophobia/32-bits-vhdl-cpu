@@ -17,7 +17,7 @@ end ALU;
 architecture Behavioral of ALU is
 
 	signal prevC		: std_logic_vector(0 to 31);
-	signal tadyewaat	: std_logic;
+	signal carry	: std_logic;
 	signal datatemp	: std_logic_vector(31 downto 0);
 	
 begin
@@ -47,13 +47,13 @@ begin
 			b		=>	data2(31),
 			cin	=>	prevC(30),
 			sel	=>	aluop,
-			cout	=>	tadyewaat,
+			cout	=>	carry,
 			output=>	datatemp(31)
 		);
 
 	zflag	<= '1' when (datatemp = x"00000000") 
 				else '0';
-
+	cflag<=carry;
 	dataout	<=	datatemp;
 
 end Behavioral;

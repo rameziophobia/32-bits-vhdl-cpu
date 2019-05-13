@@ -196,7 +196,9 @@
     <transform xil_pn:end_ts="1557012017" xil_pn:in_ck="-6933871579650504979" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1557012017">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="Decoder5x32.vhd"/>
       <outfile xil_pn:name="Full_Adder.vhd"/>
       <outfile xil_pn:name="Mux32x1.vhd"/>
@@ -220,6 +222,7 @@
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1557012022" xil_pn:in_ck="220082343948262066" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-8891824369996975110" xil_pn:start_ts="1557012022">
@@ -259,7 +262,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1557681156" xil_pn:in_ck="4728234491005562449" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="-5564880825916847054" xil_pn:start_ts="1557681146">
+    <transform xil_pn:end_ts="1557761293" xil_pn:in_ck="4728234491005562449" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="-5564880825916847054" xil_pn:start_ts="1557761283">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ALU.lso"/>
