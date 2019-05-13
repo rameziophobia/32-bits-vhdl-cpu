@@ -16,8 +16,8 @@ end ALU;
 
 architecture Behavioral of ALU is
 
-	signal prevC		: std_logic_vector(0 to 31);
-	signal carry	: std_logic;
+	signal prevC		: std_logic_vector(0 to 30);
+	signal carry		: std_logic;
 	signal datatemp	: std_logic_vector(31 downto 0);
 	
 begin
@@ -41,7 +41,6 @@ begin
 				output=>	datatemp(i)
 			);	
 	end generate;
-				
 	i_OneBitALU31: entity work.OneBitALU port map ( 
 			a		=>	data1(31),
 			b		=>	data2(31),
@@ -50,11 +49,10 @@ begin
 			cout	=>	carry,
 			output=>	datatemp(31)
 		);
-
-	zflag	<= '1' when (datatemp = x"00000000") 
-				else '0';
-	cflag<=carry;
-	dataout	<=	datatemp;
+	zflag	<= '1' when (datatemp = x"00000000") else '0';
+	cflag <= carry;
+	oflag <= prevC(30) xor carry;
+	dataout <= datatemp;
 
 end Behavioral;
 
